@@ -3,7 +3,7 @@
 
 # imports ###########################################################
 
-from flask import Flask, Blueprint
+from flask import Flask, Blueprint, render_template, flash
 
 
 # config ############################################################
@@ -17,4 +17,5 @@ main_blueprint = Blueprint('mainpage', __name__)
 
 @main_blueprint.route('/')
 def main():
-    return 'This seems to work'
+    flash('Hier komen de flasjed messages')
+    return render_template('main.html')

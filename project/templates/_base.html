@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Comments go here -->
+<!-- <header> <section> <article> <aside> <footer> -->
+<html lang="en-us" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Title of this page - change this</title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <!-- <script src="my-js-scriptfile.js" defer></script> -->
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Titelpagina uit _base.html</h1>
+            </header>
+            <section>
+                {% for message in get_flashed_messages() %}
+                    {{ message }}
+                {% endfor %}
+            </section>
+
+            <article>
+                {% block content %}
+                {% endblock %}
+
+            </article>
+
+
+            <footer>
+                <p>a menster page</p>
+            </footer>
+        </main>
+    </body>
+
+
+
+</html>
